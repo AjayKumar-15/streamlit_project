@@ -43,6 +43,6 @@ fig.add_trace(go.Scatter(x=x, y=y2,
 
 st.write(fig)
 st.subheader("Conclusion")
-st.markdown("we can see here for lesser value of x both functions coincide to each other, so we can replace the E(x) function by approx_logarithmic functtion that is -0.5772-log(x) ")
+st.markdown("we can see here,For lesser value of x both functions coincide to each other, so we can replace the E(x) function by approx_logarithmic functtion that is -0.5772-log(x) ")
 st.write("Thank You")
 st.write("Ajay")
