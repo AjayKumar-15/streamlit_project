@@ -40,6 +40,7 @@ fig.add_trace(go.Scatter(x=x, y=y1,
 fig.add_trace(go.Scatter(x=x, y=y2,
                     mode='lines',
                     name='E(X)'))
+fig.update(layout_xaxis_range = [-0.5,end])
 
 st.write(fig)
 st.subheader("Conclusion")
