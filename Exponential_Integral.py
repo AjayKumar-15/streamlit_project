@@ -4,10 +4,15 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 import math
+from PIL import image
 
 st.set_page_config(page_title="Data is OIL", layout="wide")
 
 st.title("Power Series Expansion of Exponential Integral function")
+
+image = Image.open('func.png')
+st.image(image, caption="Series representation of Exponential Integral", width=None, use_column_width=None, clamp=False, channels='RGB', output_format='auto')
+
 st.markdown("Making function E(X)")
 n=st.number_input("No of Steps in Summation part of function:",value=1000)
 
