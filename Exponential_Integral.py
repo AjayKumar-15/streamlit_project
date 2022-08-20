@@ -49,6 +49,6 @@ fig.update(layout_xaxis_range = [-0.1,end])
 
 st.write(fig)
 st.subheader("Conclusion")
-st.markdown("we can see here,For lesser value of x both functions coincide to each other, so we can replace the E(x) function by approx_logarithmic functtion that is -0.5772-log(x) ")
+st.markdown("we can see here,For lesser value of x both functions coincide to each other, so we can replace the E(x) function by approx_logarithmic function that is -0.5772-log(x) ")
 st.write("Thank You")
 st.write("Ajay")
