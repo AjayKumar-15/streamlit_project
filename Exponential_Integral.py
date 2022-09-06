@@ -1,6 +1,7 @@
 #Exponential Integeration
 import streamlit as st
 import numpy as np
+import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import math
@@ -35,6 +36,12 @@ x=np.array(x)
 y1=-0.5772-np.log(x)
 #Without Approximtion
 y2=y1+E(x)
+
+
+data=pd.DataFrame({"x":x,"E(x)":y2,"-0.5772-ln(x)":y1})
+if st.checkbox("Show Raw Data",False):
+    st.subheader("Raw Data")
+    st.write(data)
 
 st.subheader("Plot of function")
 st.markdown("Comparision of E(x) and log_Approx")
