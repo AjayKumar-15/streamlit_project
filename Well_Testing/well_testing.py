@@ -97,6 +97,9 @@ elif select=="Semi-log":
     filtered=data[(data[column1]>=start_x)& (data[column1]<(end_x))]
     new_x=filtered.iloc[:,0].values
     new_y=filtered.iloc[:,1].values
+    if st.checkbox("Selected Data",False):
+        st.subheader("Selected Data")
+        st.write(filtered)
     p = np.polyfit(np.log(new_x),new_y, 1)
     new_x=(new_x)
     pred_y=p[0]*np.log(new_x)+p[1]
@@ -133,6 +136,9 @@ else:
     filtered=data[(data[column1]>=start_x)& (data[column1]<(end_x))]
     new_x=filtered.iloc[:,0].values
     new_y=filtered.iloc[:,1].values
+    if st.checkbox("Selected Data",False):
+        st.subheader("Selected Data")
+        st.write(filtered)
     p = np.polyfit(np.log(new_x),np.log(new_y), 1)
     pred_y=np.exp(p[0]*np.log(new_x)+p[1])
     fig.add_trace(go.Scatter(
